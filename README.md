@@ -53,3 +53,7 @@ The following dependencies are installed in order to use pre-processors such as 
 
 - jade
 - stylus
+=======
+# prev
+prev
+>>>>>>> e30b3309cfe68040616c88c33b8b6f22e40d4e3d
