@@ -4,8 +4,8 @@
   "description": "Vueify transform for Browserify example",
   "main": "index.js",
   "scripts": {
-    "dev": "watchify -vd -p browserify-hmr -t vueify -e src/main.js -o build/build.js & http-server -c 1 -a localhost",
-    "build": "NODE_ENV=production ./node_modules/watchify/node_modules/.bin/browserify -t vueify -e src/main.js | uglifyjs -c warnings=false -m > build/build.js"
+    "dev": "watchify -vd -p browserify-hmr -t vueify -e src/main.js -o build/build2.js ",
+    "build": "browserify -t vueify -e src/main.js | uglifyjs -c warnings=false -m > build/build.js"
   },
   "author": "Evan You",
   "license": "MIT",
@@ -24,6 +24,8 @@
     "watchify": "^3.4.0"
   },
   "dependencies": {
-    "vue": "^1.0.0"
+    "stylus": "^0.52.4",
+    "vue": "^1.0.0",
+    "vue-resource": "^0.1.17"
   }
 }

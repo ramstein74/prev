@@ -1,6 +1,7 @@
-var Vue = require('vue')
-var App = require('./app.vue')
-
+var Vue = require('vue');
+Vue.config.debug = true;
+var App = require('./app.vue');
+Vue.use(require('vue-resource'));
 new Vue({
   el: 'body',
   components: {
