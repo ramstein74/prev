@@ -10,6 +10,7 @@ export default {
   ready:function(){
     console.log("load ready");
     this.$http.get('http://localhost/Vue/default/getStocks.json', (data, status, request) =>{
+      this.mpdata=[];
       data.forEach((d)=>{
         let temp={
           cod:d.cod,

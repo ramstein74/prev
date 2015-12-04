@@ -1,7 +1,8 @@
 <style scoped lang="stylus">
 span
   color red
-
+tr:hover
+  background-color #00b5ad +10%
 .checked::before
   color green
   font-weight bold
@@ -15,7 +16,7 @@ span
 
 <template lang="jade">
 
-tr
+tr(@click="toggle(this)")
   td {{ cod }}
   td {{ desc }}
   td {{ cume }}
@@ -27,7 +28,7 @@ tr
         input(type='text', v-model='quantity')
     td {{ percentage |currency ''}}% 
   td "custoTon"
-  td(:class="{'checked':checked}", @click="toggle(this)") 
+  td(:class="{'checked':checked}") 
 </template>
 
 <script>

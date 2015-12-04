@@ -1,5 +1,6 @@
 <template lang="jade">
 &nbsp
+
 a.ui.cyan.circular.label {{total}}
 a.ui.olive.circular.label {{selected}}
 </template>
