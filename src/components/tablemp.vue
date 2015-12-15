@@ -27,6 +27,32 @@ th {
 
 <template lang="jade">
 div#tabgeral
+  .ui.compact.menu
+    a.item.active
+      | Resinas
+      count-category(:total="totalscat['455']", :selected="cargas")
+    a.item
+      | Lubrificantes
+      .floating.ui.teal.label 40/3
+    a.item.active
+      | Antichoques
+      .floating.ui.teal.label 40/3
+    a.item
+      | Estabilizantes
+      .floating.ui.teal.label 40/3
+    a.item
+      | Plastificantes
+      .floating.ui.teal.label 40/3
+    a.item
+      | Auxiliares
+      .floating.ui.teal.label 40/3
+    a.item
+      | Pigmentos
+      .floating.ui.teal.label 40/3
+    a.item
+      | Cargas
+      .floating.ui.teal.label 40/3
+
   table.tabela
     thead
       tr
@@ -43,14 +69,13 @@ div#tabgeral
           span.reset(@click="reset") &#10007
     tbody
       tr(is="mp" v-for="mp in mpdata | filterBy filter " , :cod="mp.cod",:desc="mp.desc",:cume="mp.cume",:exist="mp.exist",:unidade="mp.unidade", :quantity.sync="mp.quantity", :total="total",:checked.sync="mp.checked")
-  div#mapa
-    p aqui vai
-    {{resinas}}
+
 
 </template>
 
 <script>
 import mp from './mp.vue'
+import countCategory from './countcategory.vue'
 export default {
   props: ['mpdata','filter'],
   data () {
@@ -60,18 +85,20 @@ export default {
   methods:{
           reset:function(){
           console.log("resetting");
-          this.mpdata.forEach(function(item){
-            item.checked='';
-            item.phr=0;
+          this.mpdata.forEach(item =>{
+            if ((item.cod).substring(0,3)==this.filter){
+              item.checked='';
+              item.phr=0;
+            }
           });
         }
-
   },
   computed:{
 
 	},
     components: {
-    mp
+    mp,
+    countCategory
   }
   }
 </script>

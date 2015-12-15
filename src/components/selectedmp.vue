@@ -1,5 +1,16 @@
 <style scoped>
 margin:4px;
+.tabela { 
+
+  cellspacing: "10";
+
+}
+/* Zebra striping */
+
+tr:hover{
+  cursor:pointer;
+}
+
 
 </style>
 
@@ -20,8 +31,18 @@ a.ui.label
 
 
       a.ui.blue.ribbon.label Resinas
+        
       span
         a.ui.tag.label 
+          |€ 100.00
+      span
+        a.ui.tag.label 
+          |€ 100.00
+      span
+        a.ui.tag.label 
+          |€ 100.00
+      span
+        a.ui.tag.red.label 
           |€ 100.00
       span
         new-mp(v-for="mp in mpdata| filterBy '405' |filterBy true", :mp.sync="mp")
@@ -37,8 +58,10 @@ a.ui.label
       span
         a.ui.tag.label 
           |€ 100.00
-      span 
-        new-mp(v-for="mp in mpdata| filterBy '410' |filterBy true", :mp.sync="mp")
+      span
+        table.tabela
+          tbody
+            tr(is="new-mp" ,v-for="mp in mpdata| filterBy '410' |filterBy true", :mp.sync="mp")
 
       a.ui.blue.ribbon.label Plastificantes
       span
