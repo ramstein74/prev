@@ -27,31 +27,6 @@ th {
 
 <template lang="jade">
 div#tabgeral
-  .ui.compact.menu
-    a.item.active
-      | Resinas
-      count-category(:total="totalscat['455']", :selected="cargas")
-    a.item
-      | Lubrificantes
-      .floating.ui.teal.label 40/3
-    a.item.active
-      | Antichoques
-      .floating.ui.teal.label 40/3
-    a.item
-      | Estabilizantes
-      .floating.ui.teal.label 40/3
-    a.item
-      | Plastificantes
-      .floating.ui.teal.label 40/3
-    a.item
-      | Auxiliares
-      .floating.ui.teal.label 40/3
-    a.item
-      | Pigmentos
-      .floating.ui.teal.label 40/3
-    a.item
-      | Cargas
-      .floating.ui.teal.label 40/3
 
   table.tabela
     thead

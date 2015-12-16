@@ -8,7 +8,7 @@
 </style>
 
 <template lang="jade">
-a.ui.olive.circular.label {{total}}/{{selected}}
+div.ui.mini.label {{total}}/{{selected}}
 
 </template>
 
