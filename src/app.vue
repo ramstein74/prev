@@ -43,6 +43,7 @@ loadmp(:mpdata.sync="mpdata")
           a.item.active(data-tab='auxiliares') Auxiliares
           a.item.active(data-tab='pigmentos') Pigmentos
           a.item.active(data-tab='cargas') Cargas
+          a.item.active(data-tab='seleccionados') Seleccionados
         .ui.bottom.attached.tab.segment(data-tab='resinas')
           table-mp(:filter="405",:mpdata.sync="mpdata")
         .ui.bottom.attached.tab.segment(data-tab='lubrificantes')
@@ -59,8 +60,10 @@ loadmp(:mpdata.sync="mpdata")
          table-mp(:filter="440",:mpdata.sync="mpdata")
         .ui.bottom.attached.tab.segment.active(data-tab='cargas')
          table-mp(:filter="455",:mpdata.sync="mpdata")
-  .five.wide.column
-    selected-mp(:mpdata.sync="mpdata")
+        .ui.bottom.attached.tab.segment.active(data-tab='seleccionados')
+         selected-mp(:mpdata.sync="mpdata")
+
+    
 
 
   
