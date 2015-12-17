@@ -17,19 +17,7 @@ td
 <template lang="jade">
 
 
-tr
-  td 
-    .ui.mini.icon.input
-      input(type="number", name="numericInput", size="3", min="0", step="0.000001", value="0")
-  td 
-    | {{99.989}}
-  td 
-    | {{99.98989 |currency "€"}}
-  td 
-    i.delete.icon(@click="toggle()") 
-    span.mp {{mp.desc}}
-
-
+|here i come
 
 </template>
 

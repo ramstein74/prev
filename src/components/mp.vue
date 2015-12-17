@@ -2,7 +2,7 @@
 span
   color red
 td 
-  font-size 12px
+  font-size 16px
 tr:hover
   background-color #00b5ad +10%
 .checked::before

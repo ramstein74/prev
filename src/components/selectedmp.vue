@@ -1,112 +1,181 @@
-<style scoped>
-margin:4px;
-.tabela { 
+<style scoped lang="stylus">
+margin:0px
+.tabela
+  cellspacing: "10"
 
-  cellspacing: "10";
+.row
+  margin 14px
 
-}
+hr
+  border-top 1px dashed #0f6d92
+
 /* Zebra striping */
 
-tr:hover{
-  cursor:pointer;
-}
+tr:hover
+  cursor:pointer
+
 
 
 </style>
 
 <template lang="jade">
-a.ui.label.green
-  i.mail.icon
-  |Save
-a.ui.label
-  i.mail.icon
-  |Save
+
+.ui.top.attached.tabular.menu
+  a.item.active(data-tab="first") 
+    i.check.circle.icon
+  a.item(data-tab="second") 
+    i.align.justify.icon 
+.ui.bottom.attached.tab.segment.active(data-tab="first")
+  .ui.one.column.grid
+
+    .column
+      .ui.raised.segment
 
 
-
-.ui.one.column.grid
-
-  .column
-    .ui.raised.segment
-
-
-      a.ui.blue.ribbon.label Resinas
+        a.ui.ribbon.label Resinas
+          
+        span
+          a.ui.tag.label 
+            |€ 100.00
+        span
+          a.ui.tag.label 
+            |€ 100.00
+        span
+          a.ui.tag.label 
+            |€ 100.00
+        span
+          a.ui.tag.red.label 
+            |Resinas
         
-      span
-        a.ui.tag.label 
-          |€ 100.00
-      span
-        a.ui.tag.label 
-          |€ 100.00
-      span
-        a.ui.tag.label 
-          |€ 100.00
-      span
-        a.ui.tag.red.label 
-          |€ 100.00
-      span
-        new-mp(v-for="mp in mpdata| filterBy '405' |filterBy true", :mp.sync="mp")
-      
-      a.ui.blue.ribbon.label Lubrificantes
-      span
-        a.ui.tag.label 
-          |€ 100.00
-      span 
-        new-mp(v-for="mp in mpdata| filterBy '430' |filterBy true", :mp.sync="mp")
-      
-      a.ui.blue.ribbon.label Antichoques
-      span
-        a.ui.tag.label 
-          |€ 100.00
-      span
-        table.tabela
-          tbody
-            tr(is="new-mp" ,v-for="mp in mpdata| filterBy '410' |filterBy true", :mp.sync="mp")
+        span
+          table.tabela.row
+            thead
+              tr
+                th phr
+                th %
+                th Custo/Ton
 
-      a.ui.blue.ribbon.label Plastificantes
-      span
-        a.ui.tag.label 
-          |€ 100.00
-      span 
-        new-mp(v-for="mp in mpdata| filterBy '425' |filterBy true", :mp.sync="mp")
-      
-      a.ui.blue.ribbon.label Estabilizantes
-      span
-        a.ui.tag.label 
-          |€ 100.00
-      span 
-        new-mp(v-for="mp in mpdata| filterBy '415' |filterBy true", :mp.sync="mp")
-      
-      a.ui.blue.ribbon.label Auxiliares
-      span
-        a.ui.tag.label 
-          |€ 100.00
-      span 
-        new-mp(v-for="mp in mpdata| filterBy '420' |filterBy true", :mp.sync="mp")
-      
-      a.ui.blue.ribbon.label Pigmentos
-      span
-        a.ui.tag.label 
-          |€ 100.00
-      span 
-        new-mp(v-for="mp in mpdata| filterBy '440' |filterBy true", :mp.sync="mp")
-      
-      a.ui.blue.ribbon.label Cargas
-      span
-        a.ui.tag.label 
-          |€ 100.00
-      span 
-        new-mp(v-for="mp in mpdata| filterBy '455' |filterBy true", :mp.sync="mp")
-      a.ui.red.ribbon.label Total
-      span
-        a.ui.red.tag.label 
-          |€ 100.00
-      
+
+            tbody
+              tr(is="new-mp" ,v-for="mp in mpdata| filterBy '405' |filterBy true", :mp.sync="mp")
+        
+        hr
+        a.ui.ribbon.label Lubrificantes
+        span
+          a.ui.tag.label 
+            |€ 100.00
+        
+        span
+          table.tabela.row
+            thead
+              tr
+                th phr
+                th %
+                th Custo/Ton
+
+            tbody
+              tr(is="new-mp" ,v-for="mp in mpdata| filterBy '430' |filterBy true", :mp.sync="mp")
+        hr
+        a.ui.ribbon.label Antichoques
+        span
+          a.ui.tag.label 
+            |€ 100.00
+        span
+          table.tabela.row
+            thead
+              tr
+                th phr
+                th %
+                th Custo/Ton
+
+            tbody
+              tr(is="new-mp" ,v-for="mp in mpdata| filterBy '410' |filterBy true", :mp.sync="mp")
+        hr
+        a.ui.ribbon.label Plastificantes
+        span
+          a.ui.tag.label 
+            |€ 100.00
+        span
+          table.tabela.row
+            thead
+              tr
+                th phr
+                th %
+                th Custo/Ton
+
+            tbody
+              tr(is="new-mp" ,v-for="mp in mpdata| filterBy '425' |filterBy true", :mp.sync="mp")
+        hr
+        a.ui.ribbon.label Estabilizantes
+        span
+          a.ui.tag.label 
+            |€ 100.00
+        span
+          table.tabela.row
+            thead
+              tr
+                th phr
+                th %
+                th Custo/Ton
+
+            tbody
+              tr(is="new-mp" ,v-for="mp in mpdata| filterBy '415' |filterBy true", :mp.sync="mp")
+        hr
+        a.ui.ribbon.label Auxiliares
+        span
+          a.ui.tag.label 
+            |€ 100.00
+        span
+          table.tabela.row
+            thead
+              tr
+                th phr
+                th %
+                th Custo/Ton
+
+            tbody
+              tr(is="new-mp" ,v-for="mp in mpdata| filterBy '420' |filterBy true", :mp.sync="mp")
+        hr
+        a.ui.ribbon.label Pigmentos
+        span
+          a.ui.tag.label 
+            |€ 100.00
+        span
+          table.tabela.row
+            thead
+              tr
+                th phr
+                th %
+                th Custo/Ton
+
+            tbody
+              tr(is="new-mp" ,v-for="mp in mpdata| filterBy '440' |filterBy true", :mp.sync="mp")
+   
+        a.ui.ribbon.label Cargas
+        span
+          a.ui.tag.label 
+            |€ 100.00
+        span
+          table.tabela.row
+            tbody
+              tr(is="new-mp" ,v-for="mp in mpdata| filterBy '455' |filterBy true", :mp.sync="mp")
+
+        a.ui.red.ribbon.label Total
+        span
+          a.ui.red.tag.label 
+            |€ 100.00
+        
+.ui.bottom.attached.tab.segment(data-tab="second")
+  | Second
+
+
+
 
 </template>
 
 <script>
 import newMp from './newmp.vue'
+import details from './details.vue'
 export default {
   props: ['mpdata'],
   data () {
@@ -120,7 +189,8 @@ export default {
 
 	},
   components:{
-    newMp
+    newMp,
+    details
   }
   }
 </script>
