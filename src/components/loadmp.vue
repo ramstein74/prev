@@ -30,6 +30,7 @@ export default {
           console.log("erro",data,status,request);
       }).then(function(){
         console.log("end loading");
+        toastr.info("matérias primas carregadas");
       })
   }
   }

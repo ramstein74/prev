@@ -19,6 +19,7 @@ export default {
           console.log("erro loading clients",data,status,request);
       }).then(function(){
         console.log("end loading clients");
+        toastr.info("clientes carregados");
       })
   }
   }
