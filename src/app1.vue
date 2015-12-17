@@ -1,21 +1,23 @@
 
 <template lang="jade">
+
+
 div.ui.left.vertical.inverted.labeled.sidebar.menu
   a.item
     i.home.icon
     | In&#237;cio
   a.item
     i.lab.icon
-    | Receita laborat&#243;rio
+    | Receita laboratório
   a.item
     i.world.icon
     | Receita Fabril
   a.item
     i.calendar.icon
-    | Programa Produ&#231;&#227;o
+    | Programa Produção
   a.item
     i.database.icon
-    | Reservat&#243;rios
+    | Reservatórios
   a.item
     i.line.chart.icon
     | Resinas
@@ -25,11 +27,7 @@ div.ui.left.vertical.inverted.labeled.sidebar.menu
 .pusher
   app
 
-.emptySegment
-  p
-    | Lorem Ipsum ashdlsajdhljasdjlask ashdgashdgsadgh asdgjasdjgasdsaghjhasdgjhsdgsjadgsajdgasjasghdjas
-br
-button click me  
+
 
 </template>
 
@@ -42,9 +40,9 @@ components:{
 },    
 ready(){
     $('.ui.sidebar').sidebar({
-        context: $('.emptySegment'),
+        // context: $('.emptySegment'),
         dimPage: true,
-         context: $('#app-container'),
+         
         transition: 'scale down'
     }).sidebar('attach events', 'button');
   }

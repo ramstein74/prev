@@ -14,6 +14,8 @@ loadmp(:mpdata.sync="mpdata",:totalscat.sync="totalscat")
 
 
   .sixteen.wide.column
+    button.ui.icon.button.basic.right.attached
+      i.sidebar.icon.
     div.tabmp
         .ui.top.attached.tabular.menu
           a.item.active(data-tab='resinas') Resinas 
@@ -51,8 +53,7 @@ loadmp(:mpdata.sync="mpdata",:totalscat.sync="totalscat")
          table-mp(:filter="455",:mpdata.sync="mpdata")
         .ui.bottom.attached.tab.segment(data-tab='seleccionados')
          selected-mp(:mpdata.sync="mpdata")
-
-    
+      
   
 </template>
 

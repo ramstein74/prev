@@ -42,7 +42,7 @@
 
 <template lang="jade">
 load-clientes(:clientes.sync="clientes")
-ui.ui.grid
+.ui.grid
   div.nine.wide.column
     .ui.form
       .field
