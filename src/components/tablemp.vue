@@ -50,7 +50,7 @@ div#tabgeral
 
 <script>
 import mp from './mp.vue'
-import countCategory from './countcategory.vue'
+// import countCategory from './countcategory.vue'
 export default {
   props: ['mpdata','filter'],
   data () {
@@ -73,7 +73,7 @@ export default {
 	},
     components: {
     mp,
-    countCategory
+    // countCategory
   }
   }
 </script>
