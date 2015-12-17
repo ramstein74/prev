@@ -166,7 +166,7 @@ tr:hover
             |€ 100.00
         
 .ui.bottom.attached.tab.segment(data-tab="second")
-  | Second
+  details
 
 
 
