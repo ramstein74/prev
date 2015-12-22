@@ -1,13 +1,15 @@
 
 <template lang="jade">
-td {{xx}}
+h1
+  |Consumos
+
 </tr>
   
 
 </template>
 
 <script>
-props:['xx'];
+props:[];
 export default {
 
   }
