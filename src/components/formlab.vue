@@ -54,11 +54,11 @@ loadmp(:mpdata.sync="mpdata",:totalscat.sync="totalscat")
 </template>
 
 <script>
-import mp from './mp.vue'
+import mp from './formlab/mp.vue'
 import loadmp from './loadmp.vue'
-import countCategory from './countcategory.vue'
-import tableMp from './tablemp.vue'
-import selectedMp from './selectedmp.vue'
+import countCategory from './formlab/countcategory.vue'
+import tableMp from './formlab/tablemp.vue'
+import selectedMp from './formlab/selectedmp.vue'
 export default {
   ready(){
     console.log("ready");

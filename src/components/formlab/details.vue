@@ -88,7 +88,7 @@ load-clientes(:clientes.sync="clientes")
 </template>
 
 <script>
-import loadClientes from './loadclients.vue'
+import loadClientes from '../loadclients.vue'
 export default {
   props: ['mp'],
   components:{
